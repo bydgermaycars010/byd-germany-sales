@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BYD Germany independent sales page for electric and hybrid mobility.">
+  <title>BYD Germany | Electric & Hybrid Mobility</title>
+  <style>
+    :root{
+      --ink:#111315; --muted:#687078; --line:#e7e9eb; --soft:#f5f6f7;
+      --accent:#d71920; --dark:#0d1012; --white:#fff; --radius:22px;
+      --shadow:0 18px 50px rgba(10,15,20,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1160px,92%);margin:auto}
+    .top{background:#0d1012;color:#fff;font-size:13px;padding:9px 0;text-align:center}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-weight:900;letter-spacing:-1.5px;font-size:25px}
+    .brand span{color:var(--accent)}
+    .links{display:flex;gap:26px;font-size:14px;font-weight:650}
+    .links a:hover{color:var(--accent)}
+    .menu{display:none;border:0;background:none;font-size:24px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:999px;font-weight:750;font-size:14px;border:1px solid transparent;cursor:pointer}
+    .btn.dark{background:var(--dark);color:#fff}
+    .btn.red{background:var(--accent);color:#fff}
+    .btn.light{background:#fff;border-color:#dfe2e5}
+    .hero{min-height:650px;background:linear-gradient(110deg,#f1f3f4 0%,#fff 52%,#e7eaec 100%);display:flex;align-items:center}
+    .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+    .eyebrow{display:inline-block;font-size:12px;font-weight:850;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+    h1{font-size:clamp(42px,6vw,76px);line-height:.98;letter-spacing:-3px;max-width:700px}
+    .hero p{font-size:18px;color:#4e565d;max-width:590px;margin:25px 0}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-art{height:430px;border-radius:32px;background:
+      radial-gradient(circle at 70% 30%,rgba(255,255,255,.9),transparent 28%),
+      linear-gradient(145deg,#161a1e,#3c4248 48%,#c7cbd0);box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .hero-art:before{content:"";position:absolute;width:75%;height:25%;background:rgba(0,0,0,.55);border-radius:55% 45% 30% 30%;left:12%;bottom:23%;transform:skewX(-8deg)}
+    .hero-art:after{content:"";position:absolute;width:18%;height:18%;border:12px solid #111;border-radius:50%;left:22%;bottom:13%;box-shadow:245px 0 0 -12px #111,245px 0 0 0 #111}
+    .hero-label{position:absolute;bottom:22px;left:22px;background:rgba(255,255,255,.92);padding:9px 13px;border-radius:12px;font-size:12px;font-weight:800}
+    section{padding:90px 0}
+    .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:38px}
+    h2{font-size:42px;letter-spacing:-1.7px;line-height:1.05}
+    .lead{color:var(--muted);max-width:560px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;transition:.2s}
+    .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+    .car-img{height:220px;background:linear-gradient(145deg,#eef0f1,#cdd1d5);position:relative}
+    .car-img:before{content:"";position:absolute;width:70%;height:23%;background:#171a1d;border-radius:55% 45% 30% 30%;left:15%;bottom:28%;transform:skewX(-8deg)}
+    .car-img:after{content:"";position:absolute;width:14%;height:20%;border:10px solid #101214;border-radius:50%;left:24%;bottom:17%;box-shadow:175px 0 0 -10px #101214,175px 0 0 0 #101214}
+    .card-body{padding:24px}
+    .tag{font-size:11px;font-weight:850;text-transform:uppercase;letter-spacing:.08em;color:var(--accent)}
+    h3{font-size:25px;margin:6px 0}
+    .card-body p{color:var(--muted);font-size:14px;margin:8px 0 20px}
+    .benefits{background:var(--soft)}
+    .benefit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .benefit{background:#fff;border-radius:18px;padding:24px;border:1px solid var(--line)}
+    .icon{font-size:25px;margin-bottom:15px}
+    .benefit h3{font-size:17px}
+    .benefit p{font-size:13px;color:var(--muted)}
+    .process{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .step{padding:28px;border-top:3px solid var(--accent);background:#fff;border-radius:18px;box-shadow:0 8px 30px rgba(0,0,0,.05)}
+    .num{font-size:13px;font-weight:900;color:var(--accent)}
+    .step h3{font-size:21px;margin:10px 0}
+    .contact{background:#0d1012;color:#fff}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+    .contact .lead{color:#b9c0c5}
+    form{display:grid;gap:13px}
+    input,select,textarea{width:100%;padding:15px 16px;border-radius:13px;border:1px solid #34393e;background:#171b1f;color:#fff;font:inherit}
+    textarea{min-height:125px;resize:vertical}
+    footer{background:#080a0b;color:#8d959c;padding:28px 0;font-size:12px}
+    .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .notice{margin-top:22px;padding:13px 15px;border-left:3px solid var(--accent);background:#15191c;color:#aeb5ba;font-size:12px}
+    @media(max-width:850px){
+      .links{display:none}.menu{display:block}
+      .hero{padding:70px 0}.hero-grid,.contact-grid{grid-template-columns:1fr}
+      .hero-art{height:330px}.cards{grid-template-columns:1fr 1fr}.benefit-grid{grid-template-columns:1fr 1fr}
+      .process{grid-template-columns:1fr}
+    }
+    @media(max-width:560px){
+      section{padding:65px 0}h2{font-size:34px}.cards,.benefit-grid{grid-template-columns:1fr}
+      nav{height:64px}.hero-art{height:270px}.hero p{font-size:16px}
+    }
+  </style>
+</head>
+<body>
+  <div class="top">Germany-focused electric & hybrid vehicle enquiries • Independent sales page</div>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a class="brand" href="#">BYD <span>GERMANY</span></a>
+        <div class="links">
+          <a href="#vehicles">Vehicles</a><a href="#benefits">Why BYD</a><a href="#process">How it works</a><a href="#contact">Contact</a>
+        </div>
+        <a class="btn red" href="#contact">Request a Quote</a>
+        <button class="menu" aria-label="Menu">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Electric & Hybrid Mobility in Germany</span>
+          <h1>Drive the future.<br>Made for Germany.</h1>
+          <p>Explore modern electric and hybrid mobility with a Germany-focused sales experience. Get vehicle information, availability and a personalised quote from our sales team.</p>
+          <div class="actions">
+            <a class="btn dark" href="#vehicles">Explore vehicles</a>
+            <a class="btn light" href="#contact">Talk to sales</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Vehicle showcase">
+          <div class="hero-label">Smart • Electric • Hybrid</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="vehicles">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">The range</span><h2>Choose your drive.</h2></div>
+          <p class="lead">A simple starting point for customers comparing electric and hybrid options for everyday German driving.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="car-img"></div><div class="card-body"><span class="tag">Electric</span><h3>ATTO Series</h3><p>Modern electric SUV-style mobility with a comfort-focused cabin and connected technology.</p><a class="btn light" href="#contact">Enquire</a></div></article>
+          <article class="card"><div class="car-img"></div><div class="card-body"><span class="tag">Electric</span><h3>SEAL</h3><p>A sleek electric sedan concept for drivers looking for performance, technology and everyday usability.</p><a class="btn light" href="#contact">Enquire</a></div></article>
+          <article class="card"><div class="car-img"></div><div class="card-body"><span class="tag">Plug-in Hybrid</span><h3>DM-i Range</h3><p>Electric-first plug-in hybrid driving with the flexibility of a combustion engine for longer journeys.</p><a class="btn light" href="#contact">Enquire</a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="benefits" class="benefits">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Why consider BYD</span><h2>Built around your everyday.</h2></div>
+          <p class="lead">A modern ownership proposition for drivers who want efficiency, technology and flexible mobility.</p>
+        </div>
+        <div class="benefit-grid">
+          <div class="benefit"><div class="icon">⚡</div><h3>Electric efficiency</h3><p>Electric driving can reduce reliance on petrol for everyday journeys.</p></div>
+          <div class="benefit"><div class="icon">🔋</div><h3>Battery technology</h3><p>BYD develops battery and electric-drive technologies in-house.</p></div>
+          <div class="benefit"><div class="icon">🇩🇪</div><h3>Germany focused</h3><p>Information and enquiry support tailored to customers in Germany.</p></div>
+          <div class="benefit"><div class="icon">🤝</div><h3>Personal support</h3><p>Get help comparing models, options and your next steps.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container">
+        <div class="section-head"><div><span class="eyebrow">Simple process</span><h2>From interest to drive.</h2></div></div>
+        <div class="process">
+          <div class="step"><span class="num">01 — ENQUIRE</span><h3>Tell us what you need</h3><p>Choose a vehicle category and share your preferred contact details.</p></div>
+          <div class="step"><span class="num">02 — COMPARE</span><h3>Discuss your options</h3><p>Our sales team can help you compare available electric and hybrid choices.</p></div>
+          <div class="step"><span class="num">03 — NEXT STEP</span><h3>Request your quote</h3><p>Receive the relevant pricing and availability information for your enquiry.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container contact-grid">
+        <div>
+          <span class="eyebrow">Get in touch</span>
+          <h2>Ready to find your next BYD?</h2>
+          <p class="lead" style="margin-top:20px">Send an enquiry and tell us which vehicle or type of driving you're interested in. We'll get back to you with the next steps.</p>
+          <div class="notice"><strong>Important:</strong> This is an independent sales webpage and is not the official BYD Germany website. Replace the contact details and dealership information before publishing.</div>
+        </div>
+        <form onsubmit="event.preventDefault(); alert('Thank you! Your enquiry has been prepared. Connect this form to your email/CRM before publishing.');">
+          <input required placeholder="Full name" aria-label="Full name">
+          <input required type="email" placeholder="Email address" aria-label="Email address">
+          <select aria-label="Vehicle interest"><option>Vehicle interest</option><option>Electric vehicle</option><option>Plug-in hybrid</option><option>SUV</option><option>Other</option></select>
+          <textarea placeholder="Tell us what you're looking for..." aria-label="Message"></textarea>
+          <button class="btn red" type="submit">Send enquiry</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <div>© 2026 BYD Germany Sales • Independent sales page</div>
+      <div>Not affiliated with or operated by BYD Company Limited unless expressly stated.</div>
+    </div>
+  </footer>
+</body>
+</html>
